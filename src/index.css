@@ -1,5 +1,4 @@
 @import './styles/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 html { font-size: 62.5% }
-
-body { min-height: 100vh }
