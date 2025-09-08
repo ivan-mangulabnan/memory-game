@@ -1,6 +1,7 @@
 .app {
   margin: 0 auto;
-  max-width: 140rem;
+  padding: 1rem;
+  max-width: 150rem;
   min-height: 100vh;
 
   display: flex;
