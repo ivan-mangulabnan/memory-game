@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import '../styles/banner.css';
 
-export function Banner () {
+export function Banner ({handleNewQueryOnClick}) {
   return (
     <div className='banner'>
       <Logo />
-      <Search />
+      <Search handleNewQueryOnClick={handleNewQueryOnClick}/>
     </div>
   )
 }
@@ -21,11 +22,13 @@ function Logo () {
   )
 }
 
-function Search () {
+function Search ({handleNewQueryOnClick}) {
+  const [value, setValue] = useState('');
+
   return (
     <div>
-      <input type="text" placeholder='Change GIFs'/>
-      <button>Change</button>
+      <input value={value} type="text" placeholder='Change GIFs' onChange={(e) => setValue(e.target.value)}/>
+      <button onClick={() => handleNewQueryOnClick(value)}>Change</button>
     </div>
   )
 }
