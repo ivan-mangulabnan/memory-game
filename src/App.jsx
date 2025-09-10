@@ -12,10 +12,12 @@ function App() {
     setQuery(newQuery);
   }
 
+  const gameKey = crypto.randomUUID();
+
   return (
     <div className='app'>
       <Banner handleNewQueryOnClick={handleNewQueryOnClick}/>
-      <MainContent gifs={gifs}/>
+      <MainContent key={gameKey} gifs={gifs}/>
     </div>
   )
 }
