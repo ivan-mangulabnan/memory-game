@@ -8,8 +8,28 @@
   flex-direction: column;
 }
 
-@media (max-width: 800px) {
-  .logo-text {
-    font-size: 3rem;
-  }
+.footer {
+  font-family: "Gloria Hallelujah", cursive;
+  display: grid;
+}
+
+.author {
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.footer .credits {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 6rem;
+  font-size: 1.6rem;
+  gap: 1rem;
+}
+
+.footer a {
+  color: blue;
+  font-weight: 800;
 }

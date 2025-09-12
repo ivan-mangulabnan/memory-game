@@ -40,4 +40,13 @@ html { font-size: 62.5% }
     font-size: 2rem;
     text-align: center;
   }
+
+  .app .footer {
+    gap: 1rem;
+  }
+
+  .app .footer .author,
+  .app .footer .credits {
+    font-size: 1.6rem;
+  }
 }

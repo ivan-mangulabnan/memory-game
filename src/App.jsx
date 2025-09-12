@@ -3,6 +3,7 @@ import './App.css';
 import { Banner } from './components/banner.jsx';
 import { MainContent } from './components/main-content.jsx';
 import { useFetchedGifs } from './components/fetch-api.jsx';
+import { Footer } from './components/footer.jsx';
 
 function App() {
   const [query, setQuery] = useState('cute cats');
@@ -18,6 +19,7 @@ function App() {
     <div className='app'>
       <Banner handleNewQueryOnClick={handleNewQueryOnClick}/>
       <MainContent key={gameKey} gifs={gifs}/>
+      <Footer />
     </div>
   )
 }
