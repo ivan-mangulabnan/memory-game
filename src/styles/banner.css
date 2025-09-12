@@ -28,6 +28,7 @@ h1 {
 .logo-svg { 
   width: 100%;
   max-width: 8rem;
+  min-width: 4rem;
 }
 
 .lightning {

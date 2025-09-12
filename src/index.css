@@ -2,3 +2,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 html { font-size: 62.5% }
+
+@media (max-width: 800px) {
+
+  .app .banner {
+    justify-content: space-between;
+    min-height: 6rem;
+  }
+
+  .banner .logo-svg {
+    width: 3rem;
+  }
+
+  .banner .search-container {
+    margin: 0;
+  }
+
+  .banner .search-wrapper {
+    padding: .18rem;
+  }
+
+  .search-wrapper .search-btn {
+    width: 2.2rem;
+  }
+
+  .banner .search-input {
+    font-size: 1.4rem;
+  }
+
+  .text-memory,
+  .text-game {
+    font-size: 2rem;
+  }
+
+  .main-content .empty-wrapper p,
+  .main-content .error-wrapper p {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

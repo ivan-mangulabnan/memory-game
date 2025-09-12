@@ -138,7 +138,7 @@ function Error () {
 function Empty () {
   return (
     <div className='empty-wrapper'>
-      <p>Returned gifs is less than 12. Please try another!</p>
+      <p>Returned gifs is less than 12. Please search another!</p>
     </div>
   )
 }
