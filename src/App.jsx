@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { Banner } from './components/banner.jsx';
 import { MainContent } from './components/main-content.jsx';
 import { useFetchedGifs } from './components/fetch-api.jsx';
 
 function App() {
-  const [query, setQuery] = useState('cats');
+  const [query, setQuery] = useState('cute cats');
   const gifs = useFetchedGifs(query);
 
   const handleNewQueryOnClick = (newQuery) => {

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import '../styles/main-content.css';
 
 export function MainContent({gifs}) {
@@ -37,16 +37,26 @@ export function MainContent({gifs}) {
   let ComponentToShow;
   switch (gifs.status) {
     case 'success':
-      ComponentToShow = <PictureSection gifs={newGif} handleClick={handleClick}/>
+      ComponentToShow = (
+        <>
+          <Scores currentScore={game.currentScore} bestScore={game.bestScore}/>
+          <PictureSection gifs={newGif} handleClick={handleClick}/>
+        </>
+      )
       break;
     case 'loading':
       ComponentToShow = <Loader />;
+      break;
+    case 'error':
+      ComponentToShow = <Error />;
+      break;
+    case 'empty':
+      ComponentToShow = <Empty />;
       break;
   }
 
   return (
     <div className="main-content">
-      { gifs.status === 'success' && <Scores currentScore={game.currentScore} bestScore={game.bestScore}/> }
       { ComponentToShow }
     </div>
   )
@@ -113,6 +123,22 @@ function Loader () {
         <span className="dot">.</span>
         <span className="dot">.</span>
       </p>
+    </div>
+  )
+}
+
+function Error () {
+  return (
+    <div className='error-wrapper'>
+      <p>There's an error fetching GIFS. Please refresh!</p>
+    </div>
+  )
+}
+
+function Empty () {
+  return (
+    <div className='empty-wrapper'>
+      <p>Returned gifs is less than 12. Please try another!</p>
     </div>
   )
 }
